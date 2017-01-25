@@ -25,15 +25,16 @@ class FrappeClient(object):
 
     def __init__(self, url, username, password, timeout=None, proxies=None, pool=None):
         '''
-        Additions:
+        Parameters:
 
         Added timeout, proxies and pool support in the function.
         - `timeout` is the time (seconds) for which the API client will wait for
         a request to complete before it fails. Default None. This should be set to a float for
         production machines.
         - `proxies` to set requests proxy.
-        Check [python requests documentation](http://docs.python-requests.org/en/master/user/advanced/#proxies) for usage and examples.
-        - `pool` is manages request pools. It takes a dict of params accepted by HTTPAdapter as described here http://docs.python-requests.org/en/master/api/
+        Usage and examples: http://docs.python-requests.org/en/master/user/advanced/#proxies.
+        - `pool` is manages request pools. It takes a dict of params accepted by HTTPAdapter as described in
+         http://docs.python-requests.org/en/master/api/
 
         '''
         self.session = requests.Session()
