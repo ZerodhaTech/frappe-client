@@ -1,6 +1,9 @@
 import requests
 import json
-from StringIO import StringIO
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 
 
 class AuthError(Exception):
